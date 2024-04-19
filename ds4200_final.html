@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrifying Rides: Urban E-Bike Usage Analysis</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { color: white; padding: 20px; text-align: center; }
+        section { padding: 20px; }
+        h1 { color: #ffffff; }
+        h2, h4 { color: #000000; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Electrifying Rides: How Does Electric Bike Usage in Urban Sharing Systems Influence City Traffic and Commuter Behavior?</h1>
+        <p>Group Members: Xinyi Xu, Yihan Luo, Yiming Yuan | Course: DS4200 Information Presentation and Data Visualization</p>
+    </header>
+    
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Urban bike-sharing systems have revolutionized city transportation by offering an eco-friendly alternative to traditional vehicles. The introduction of electric bikes (e-bikes) presents an opportunity to further enhance urban mobility and reduce carbon emissions. Our project aims to analyze the usage patterns of electric bikes within New York City's bike-sharing program and compare them to classic bikes to understand factors influencing their adoption and usage.</p>
+            <p>The insights gleaned will shed light on commuter behavior, peak usage times, and high-demand areas for e-bikes, informing policy decisions, infrastructure development, and strategies to boost e-bike adoption for a sustainable urban environment.</p>
+            <h4>Introduction to dataset</h4>
+            <p>Our analysis draws upon a rich dataset obtained from the official bike-sharing program's open data portal, a testament to the growing trend of data transparency and civic engagement. This dataset encompasses over 50,000 records, capturing the vibrant activity of urban commuters who have embraced the convenience of bike-sharing. Each record in the dataset is a ledger of a journey, detailing not only the type of bike used — categorized distinctly as either a 'classic' or an 'electric' bike — but also chronicling the specifics of each trip. There are 12 attributes in the dataset, including 'ride_id', 'rideable_type', 'started_at', 'ended_at',
+                'start_station_name', 'start_station_id', 'end_station_name',
+                'end_station_id', 'start_lat', 'start_lng', 'end_lat', 'end_lng',
+                'member_casual'</p>
+            <p>Data source: https://s3.amazonaws.com/tripdata/index.html</p>
+
+            <h4>References</h4>
+            <p>Zhang, Z., Krishnakumari, P., Schulte, F., & Oort, N. van. (2023b, August 26). Improving the service of E-bike Sharing by demand pattern analysis: A data-driven approach. Research in Transportation Economics. https://www.sciencedirect.com/science/article/pii/S073988592300080X </p>
+            <p>Pan, L., Xia, Y., Xing, L., Song, Z., & Xu, Y. (2022, September 18). Exploring use acceptance of electric bicycle-sharing systems: An empirical study based on PLS-SEM analysis. MDPI. https://www.mdpi.com/1424-8220/22/18/7057 </p>
+        </section>
+
+        <section id="Comprehensive Data Visualizations">
+            <h2>Comprehensive Data Visualizations</h2>
+            <h4>1. Bar Chart of the number of Classic vs. Electric Bikes</h4>
+            <figure>
+                <img src='graph1.png' alt="Number of Rides by Bike Type">
+                <figcaption>
+                    The current data shows a strong preference for classic bikes, with a high volume indicating user comfort and robust infrastructure. In contrast, electric bikes, while less used, suggesting their potential to revolutionize urban transport due to their convenience for longer distances and the possibility of marking a transition in commuter preferences towards more sustainable options in densely populated areas.
+                </figcaption>
+            </figure>
+
+            <h4>2. Boxplot of Ride Durations for Classic vs. Electric Bikes</h4>
+            <figure>
+                <img src='graph2.png' alt="Ride Durations by Bike Type">
+                <figcaption>
+                    The boxplot comparison indicates that, while most trips are of similar short durations for both bike types, electric bikes show a tendency for longer journeys. This suggests electric bikes might be preferred for extended rides, possibly due to their ease of use.
+                </figcaption>
+            </figure>
+
+            <h4>Concluding Insights</h4>
+            <p>Classic bikes dominate current usage, as shown in the bar graph, indicating familiarity and infrastructure support. The boxplot, on the other hand, shows electric bikes are often used for longer trips, suggesting they meet different commuter needs. Together, these visuals reveal a transition in urban travel preferences, with potential for electric bikes to reshape city transportation. Future strategies could focus on leveraging electric bikes for their benefits in longer-distance travel, aiding in the development of a more sustainable urban transport system.</p>
+        </section>
+
+        <section id="Static Visualizations">
+            <h2>Static Visualizations</h2>
+            <h4>1. Line Chart Comparing Hourly Usage Frequency of Classic and Electric Bikes</h4>
+            <iframe src="usage_frequency_by_time_of_day.html" title="Usage Frequency by Time of Day" width="100%" height="500" style="border:none;"></iframe>
+            <p>The line chart provides a clear view of usage patterns: classic bikes see a notable surge in rides during the mid-afternoon, indicating a preferred choice for daytime travel. In contrast, electric bikes show a consistent level of use across the day but don't reach the high peaks of their classic counterparts. This consistency in electric bike use, despite lower frequencies, uncovers an opportunity to promote their usage during off-peak times, which could help achieve a more balanced distribution of bike usage throughout the day. For urban planners, these insights are particularly useful. They can inform strategies to enhance fleet management and improve transportation services, making them more user-friendly. Encouraging the use of electric bikes could alleviate congestion during high-traffic periods and support a shift toward more sustainable urban mobility patterns. By analyzing these trends, we can better understand commuter behaviors and preferences, which is crucial for shaping future urban infrastructure and policies aimed at creating a more efficient and environmentally friendly transportation ecosystem.</p>
+
+            <h4>2.Histogram of Trip Distance Distribution for Classic and Electric Bikes</h4>
+            <iframe src="trip_distance_distribution.html" title="Number of Ride by Trip Distance" width="100%" height="500" style="border:none;"></iframe>
+            <p>The visualization "Histogram of Trip Distance Distribution for Classic and Electric Bikes" presents a bar chart displaying the frequency of bike rides based on trip distance. Each bar represents a range of distances, with the height corresponding to the number of rides within that range. Two colors differentiate the types of bikes: classic and electric. The histogram reveals that shorter trips are more common for both bike types, with a significantly higher number of classic bike rides across all distances.</p>
+
+            <h4>3.Scatterplot of Trip Distance Percentage Distribution for Electric Bikes</h4>
+            <iframe src="electric_bike_percentage.html" title="Electric Bike Percentage by Trip Distance" width="100%" height="500" style="border:none;"></iframe>
+            <p>"Scatterplot of Trip Distance Percentage Distribution for Electric Bikes" specifically addresses the proportion of electric bike usage over various distances. Unlike the first chart, this scatterplot illustrates the percentage of trips made with electric bikes at specific distance points. It becomes evident that as the trip distance increases, the proportion of electric bike usage also rises, suggesting a preference for electric bikes on longer journeys. The reason might be the limited strength for human in long-distance travel. This trend is not apparent from the first chart due to the overwhelming number of classic bike trips dominating the data. The second graph is crucial in highlighting the increasing inclination towards electric bikes as the travel distance extends, a subtlety that could inform infrastructure planning and policy-making regarding sustainable urban transport.</p>
+
+            <h4>4.New York City Bike Route Network Visualized with D3.js</h4>
+            <iframe src="bike route.html" title="Bike Route D3" width="100%" height="500" style="border:none;"></iframe>
+            <p>The map titled "New York City Bike Route Network Visualized with D3.js" presents the intricate web of bike pathways across the city's boroughs, with the red lines clearly illustrating the extensive routes available to cyclists. The visualization is detailed, showcasing the density of routes in various areas, which could be indicative of higher cycling traffic and potential demand for bicycles.</p>
+            <p>Building on the insights from the earlier histograms and scatterplots, which suggest a preference for electric bikes on longer routes, policymakers might consider this map as a basis for strategic placement of electric bike stations. Areas with a dense network of bike routes, especially those connecting longer distances, could benefit from an increased availability of electric bikes. This would not only cater to the rising demand for electric bikes on longer commutes but also has the potential to ease urban traffic congestion by encouraging cycling as a more convenient and accessible mode of transportation.</p>
+        </section>
+
+        <section id="Interactive Visualizations">
+            <h2>Data Visualization- Interactive Map</h2>
+            <h4>1. Interactive Distribution Map of Classic and Electric Bikes in New York City </h4>
+            <iframe src="interactive_bike_map.html" title="Interactive Bike Map 1" width="100%" height="500" style="border:none;"></iframe>
+            <p>The "Interactive Distribution Map of Classic and Electric Bikes in New York City" provides a granular view of the cycling landscape, pinpointing where classic and electric bikes are being utilized across the city.  Blue and red dots pepper the streets, with blue representing classic bikes and red signaling the presence of electric ones.  This map's interactive nature allows users to explore specific areas to understand the prevalence of each bike type.  A higher density of red dots in certain regions suggests a stronger preference for electric bikes, possibly correlating with longer route availability or challenging terrain where the assistance of an electric motor is advantageous.  For urban planners and policymakers, this map offers a clear visualization of current usage patterns, serving as a critical tool for optimizing the placement of new bike-sharing stations.  It could encourage the strategic placement of more electric bikes in areas with a higher concentration of red dots, potentially easing traffic congestion by making cycling a more attractive option for longer commutes within the urban sprawl.</p>
+            
+            <h4>2. Interactive Distribution Map of Classic and Electric Bike Routes </h4>
+            <iframe src="Project Interactive map2.html" title="Interactive Bike Map 2" width="100%" height="500" style="border:none;"></iframe>
+            <p>Electric bikes are emerging as a transformative force in urban commuting, presenting a compelling alternative that caters to the need for longer and more varied routes. Their increased use during rush hours signifies their reliability and effectiveness, challenging traditional commuting norms and offering a sustainable solution that meshes well with the rhythms of city life. As e-bikes blend seamlessly with existing public transit systems, they underscore the importance of strategic urban planning. By recognizing the patterns of e-bike use and user preferences, city planners are encouraged to pursue targeted enhancements to transportation policies. Such initiatives could focus on expanding bike-sharing infrastructure, improving cycling routes, and integrating bike travel with other modes of transport, thereby nurturing a sustainable and resilient commuting ecosystem for the future.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Our comprehensive exploration of New York City's bike-sharing data has illuminated significant trends in urban transit, particularly the divergent usage patterns between classic and electric bikes. Our visualizations have painted a detailed picture of the urban cycling landscape, revealing a marked preference for classic bikes on shorter routes, which may be attributed to their widespread availability and the established cycling infrastructure in the city.</p>
+            <p>However, the data also indicates a growing affinity for electric bikes, especially for more extended commutes. This trend likely arises from the added convenience and lessened physical strain provided by electric bikes, which align with the natural limitations of commuter endurance and the city's evolving transportation needs. It's clear from our findings that electric bikes have the potential to play a crucial role in reshaping urban mobility and enhancing the overall efficiency of the city's transportation system.</p>
+            <p>Looking to the future, there is vast potential to extend this research. By incorporating additional data layers such as weather patterns, topography, and demographic information, we could gain a more nuanced understanding of the factors driving bike choice and usage. There is also scope to explore the impact of temporal factors such as time of day, day of the week, and seasonality on cycling habits.</p>
+            <p>In light of these insights, policymakers could consider prioritizing the expansion of electric bike programs, especially in densely trafficked areas. By providing a robust network of electric bike stations and integrating them with the existing transport infrastructure, there is an opportunity to alleviate congestion, reduce emissions, and foster a more dynamic and sustainable urban environment.</p>
+            <p>In conclusion, our project has demonstrated the power of data visualization in deciphering complex datasets and the pivotal role it can play in informing policy and urban development. As cities continue to grow and evolve, the intelligent analysis and presentation of data will be vital in crafting the smart and sustainable cities of tomorrow.</p>
+        </section>
+
+    </div>
+    
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

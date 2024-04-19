@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-5a5abf59bfa1ef268fd9311c1f8135e6"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "rideable_type", "type": "nominal"}, "tooltip": [{"field": "hour", "type": "quantitative"}, {"field": "ride_count", "type": "quantitative"}, {"field": "rideable_type", "type": "nominal"}], "x": {"field": "hour", "type": "ordinal"}, "y": {"field": "ride_count", "type": "quantitative"}}, "height": 400, "title": "Usage Frequency by Time of Day", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-5a5abf59bfa1ef268fd9311c1f8135e6": [{"hour": 0, "rideable_type": "classic_bike", "ride_count": 777}, {"hour": 0, "rideable_type": "electric_bike", "ride_count": 57}, {"hour": 1, "rideable_type": "classic_bike", "ride_count": 578}, {"hour": 1, "rideable_type": "electric_bike", "ride_count": 36}, {"hour": 2, "rideable_type": "classic_bike", "ride_count": 364}, {"hour": 2, "rideable_type": "electric_bike", "ride_count": 34}, {"hour": 3, "rideable_type": "classic_bike", "ride_count": 198}, {"hour": 3, "rideable_type": "electric_bike", "ride_count": 15}, {"hour": 4, "rideable_type": "classic_bike", "ride_count": 245}, {"hour": 4, "rideable_type": "electric_bike", "ride_count": 13}, {"hour": 5, "rideable_type": "classic_bike", "ride_count": 472}, {"hour": 5, "rideable_type": "electric_bike", "ride_count": 21}, {"hour": 6, "rideable_type": "classic_bike", "ride_count": 1376}, {"hour": 6, "rideable_type": "electric_bike", "ride_count": 77}, {"hour": 7, "rideable_type": "classic_bike", "ride_count": 2640}, {"hour": 7, "rideable_type": "electric_bike", "ride_count": 154}, {"hour": 8, "rideable_type": "classic_bike", "ride_count": 3728}, {"hour": 8, "rideable_type": "electric_bike", "ride_count": 215}, {"hour": 9, "rideable_type": "classic_bike", "ride_count": 2670}, {"hour": 9, "rideable_type": "electric_bike", "ride_count": 168}, {"hour": 10, "rideable_type": "classic_bike", "ride_count": 2490}, {"hour": 10, "rideable_type": "electric_bike", "ride_count": 141}, {"hour": 11, "rideable_type": "classic_bike", "ride_count": 2846}, {"hour": 11, "rideable_type": "electric_bike", "ride_count": 147}, {"hour": 12, "rideable_type": "classic_bike", "ride_count": 3231}, {"hour": 12, "rideable_type": "electric_bike", "ride_count": 138}, {"hour": 13, "rideable_type": "classic_bike", "ride_count": 3213}, {"hour": 13, "rideable_type": "electric_bike", "ride_count": 149}, {"hour": 14, "rideable_type": "classic_bike", "ride_count": 3405}, {"hour": 14, "rideable_type": "electric_bike", "ride_count": 125}, {"hour": 15, "rideable_type": "classic_bike", "ride_count": 3762}, {"hour": 15, "rideable_type": "electric_bike", "ride_count": 152}, {"hour": 16, "rideable_type": "classic_bike", "ride_count": 4435}, {"hour": 16, "rideable_type": "electric_bike", "ride_count": 199}, {"hour": 17, "rideable_type": "classic_bike", "ride_count": 5321}, {"hour": 17, "rideable_type": "electric_bike", "ride_count": 244}, {"hour": 18, "rideable_type": "classic_bike", "ride_count": 4599}, {"hour": 18, "rideable_type": "electric_bike", "ride_count": 272}, {"hour": 19, "rideable_type": "classic_bike", "ride_count": 3249}, {"hour": 19, "rideable_type": "electric_bike", "ride_count": 164}, {"hour": 20, "rideable_type": "classic_bike", "ride_count": 2171}, {"hour": 20, "rideable_type": "electric_bike", "ride_count": 88}, {"hour": 21, "rideable_type": "classic_bike", "ride_count": 1670}, {"hour": 21, "rideable_type": "electric_bike", "ride_count": 92}, {"hour": 22, "rideable_type": "classic_bike", "ride_count": 1281}, {"hour": 22, "rideable_type": "electric_bike", "ride_count": 96}, {"hour": 23, "rideable_type": "classic_bike", "ride_count": 1082}, {"hour": 23, "rideable_type": "electric_bike", "ride_count": 80}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NYC Bike Routes Map</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        svg { width: 100%; height: 100vh; }
+        .borough { fill: #ccc; stroke: #000; stroke-width: 0.5; }
+        .bike-route { stroke: red; fill: none; stroke-width: 1.5; }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 6px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="tooltip" class="tooltip"></div>
+    <script src="map.js"></script>
+</body>
+</html>

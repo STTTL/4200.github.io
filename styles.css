@@ -1,0 +1,83 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1100px; /* Set a max-width for larger screens */
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Header Styling */
+header {
+    background: #0cb5d3; /* A vibrant blue header background */
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 5px solid #025aa5; /* A slightly darker blue for the border */
+}
+
+/* Footer Styling */
+footer {
+    background: #000000; /* Matching the header background */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 5px solid #025aa5; /* Matching the header border */
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 20px;
+}
+
+/* Heading Styling */
+h1, h2, h4 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #025aa5; /* Darker blue for heading h2 to match the theme */
+}
+
+/* Image Styling for Comprehensive Data Visualizations */
+#ComprehensiveDataVisualizations img {
+    max-width: 100%; /* Ensure image does not exceed the width of the container */
+    height: auto;
+    border-radius: 5px; /* Optional: add rounded corners to images */
+    margin-top: 10px;
+}
+
+/* Figure and Figcaption Styling */
+figure {
+    background: #e7e7e7; /* Light grey background for the figures */
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center; /* Center align the figcaptions */
+}
+
+figcaption {
+    font-style: italic;
+    color: #555; /* A darker grey for figcaption text */
+    margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 10px 0;
+    }
+}
